@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
+import requireAuth from "components/requireAuth.js";
 
 class ComponentBox extends Component {
 	state = {
@@ -51,4 +52,4 @@ class ComponentBox extends Component {
 export default connect(
 	null,
 	actions
-)(ComponentBox);
+)(requireAuth(ComponentBox));
